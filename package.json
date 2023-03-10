@@ -1,0 +1,16 @@
+{
+  "name": "@noir-lang/noir_util_wasm",
+  "collaborators": [
+    "The Noir Team <kevtheappdev@gmail.com>"
+  ],
+  "version": "0.2.0-48904b4c",
+  "files": [
+    "nodejs",
+    "web",
+    "package.json"
+  ],
+  "main": "./nodejs/noir_util_wasm.js",
+  "types": "./web/noir_util_wasm.d.ts",
+  "module": "./web/noir_util_wasm.js",
+  "sideEffects": false
+}
