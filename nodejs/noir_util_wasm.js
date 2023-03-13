@@ -224,6 +224,16 @@ module.exports.select_return_value = function(abi_json_str, intermediate_witness
     }
 };
 
+/**
+* @param {Uint8Array} circuit
+* @param {Map<any, any>} intermediate_witness
+* @returns {Map<any, any>}
+*/
+module.exports.select_public_witness = function(circuit, intermediate_witness) {
+    const ret = wasm.select_public_witness(addHeapObject(circuit), addHeapObject(intermediate_witness));
+    return takeObject(ret);
+};
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -318,6 +328,25 @@ module.exports.__wbg_keys_780cff79279a9bb1 = function(arg0) {
     return addHeapObject(ret);
 };
 
+module.exports.__wbg_buffer_cf65c07de34b9a08 = function(arg0) {
+    const ret = getObject(arg0).buffer;
+    return addHeapObject(ret);
+};
+
+module.exports.__wbg_new_537b7341ce90bb31 = function(arg0) {
+    const ret = new Uint8Array(getObject(arg0));
+    return addHeapObject(ret);
+};
+
+module.exports.__wbg_set_17499e8aa4003ebd = function(arg0, arg1, arg2) {
+    getObject(arg0).set(getObject(arg1), arg2 >>> 0);
+};
+
+module.exports.__wbg_length_27a2afe8ab42b09f = function(arg0) {
+    const ret = getObject(arg0).length;
+    return ret;
+};
+
 module.exports.__wbindgen_debug_string = function(arg0, arg1) {
     const ret = debugString(getObject(arg1));
     const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
@@ -328,6 +357,11 @@ module.exports.__wbindgen_debug_string = function(arg0, arg1) {
 
 module.exports.__wbindgen_throw = function(arg0, arg1) {
     throw new Error(getStringFromWasm0(arg0, arg1));
+};
+
+module.exports.__wbindgen_memory = function() {
+    const ret = wasm.memory;
+    return addHeapObject(ret);
 };
 
 const path = require('path').join(__dirname, 'noir_util_wasm_bg.wasm');

@@ -12,3 +12,9 @@ export function arrange_initial_witness(abi_json_str: string, inputs_json_str: s
 * @returns {string}
 */
 export function select_return_value(abi_json_str: string, intermediate_witness: Map<any, any>): string;
+/**
+* @param {Uint8Array} circuit
+* @param {Map<any, any>} intermediate_witness
+* @returns {Map<any, any>}
+*/
+export function select_public_witness(circuit: Uint8Array, intermediate_witness: Map<any, any>): Map<any, any>;

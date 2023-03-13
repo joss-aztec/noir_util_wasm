@@ -3,7 +3,7 @@
   "collaborators": [
     "The Noir Team <kevtheappdev@gmail.com>"
   ],
-  "version": "0.2.0-96609ac7",
+  "version": "0.2.0-1cf909af",
   "files": [
     "nodejs",
     "web",
@@ -18,6 +18,6 @@
     "url": "https://github.com/joss-aztec/noir-util-js.git"
   },
   "compiler": {
-    "versionHash": "96609ac71dffa6323015742d6c5e16e011942166"
+    "versionHash": "1cf909af6b5cb9f2eb0d95a60436473800c64bea"
   }
 }
