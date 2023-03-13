@@ -6,15 +6,24 @@
 * @returns {Map<any, any>}
 */
 export function arrange_initial_witness(abi_json_str: string, inputs_json_str: string): Map<any, any>;
+/**
+* @param {string} abi_json_str
+* @param {Map<any, any>} intermediate_witness
+* @returns {string}
+*/
+export function select_return_value(abi_json_str: string, intermediate_witness: Map<any, any>): string;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly arrange_initial_witness: (a: number, b: number, c: number, d: number) => number;
+  readonly select_return_value: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
+  readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly __wbindgen_free: (a: number, b: number) => void;
+  readonly __wbindgen_exn_store: (a: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;
