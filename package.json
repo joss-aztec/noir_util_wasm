@@ -3,7 +3,7 @@
   "collaborators": [
     "The Noir Team <kevtheappdev@gmail.com>"
   ],
-  "version": "0.2.0-1cf909af",
+  "version": "0.2.0-16913fc",
   "files": [
     "nodejs",
     "web",
@@ -15,9 +15,9 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/joss-aztec/noir-util-js.git"
+    "url": "https://github.com/joss-aztec/noir_util_wasm.git"
   },
   "compiler": {
-    "versionHash": "1cf909af6b5cb9f2eb0d95a60436473800c64bea"
+    "versionHash": "16913fc0565c991542d1ee7fa429fac2ec08369c"
   }
 }

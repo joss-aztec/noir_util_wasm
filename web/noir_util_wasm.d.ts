@@ -8,6 +8,12 @@
 export function arrange_initial_witness(abi_json_str: string, inputs_json_str: string): Map<any, any>;
 /**
 * @param {string} abi_json_str
+* @param {string} inputs_json_str
+* @returns {Map<any, any>}
+*/
+export function arrange_public_witness(abi_json_str: string, inputs_json_str: string): Map<any, any>;
+/**
+* @param {string} abi_json_str
 * @param {Map<any, any>} intermediate_witness
 * @returns {string}
 */
@@ -24,6 +30,7 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly arrange_initial_witness: (a: number, b: number, c: number, d: number) => number;
+  readonly arrange_public_witness: (a: number, b: number, c: number, d: number) => number;
   readonly select_return_value: (a: number, b: number, c: number, d: number) => void;
   readonly select_public_witness: (a: number, b: number) => number;
   readonly __wbindgen_malloc: (a: number) => number;
