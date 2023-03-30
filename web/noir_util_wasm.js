@@ -250,8 +250,8 @@ export function select_public_witness(circuit, intermediate_witness) {
 * @param {Map<any, any>} intermediate_witness
 * @returns {Array<any>}
 */
-export function select_public_witness_flattened(circuit, intermediate_witness) {
-    const ret = wasm.select_public_witness_flattened(addHeapObject(circuit), addHeapObject(intermediate_witness));
+export function select_return_flattened(circuit, intermediate_witness) {
+    const ret = wasm.select_return_flattened(addHeapObject(circuit), addHeapObject(intermediate_witness));
     return takeObject(ret);
 }
 
