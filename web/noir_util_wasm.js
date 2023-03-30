@@ -245,6 +245,16 @@ export function select_public_witness(circuit, intermediate_witness) {
     return takeObject(ret);
 }
 
+/**
+* @param {Uint8Array} circuit
+* @param {Map<any, any>} intermediate_witness
+* @returns {Array<any>}
+*/
+export function select_public_witness_flattened(circuit, intermediate_witness) {
+    const ret = wasm.select_public_witness_flattened(addHeapObject(circuit), addHeapObject(intermediate_witness));
+    return takeObject(ret);
+}
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -326,6 +336,10 @@ function getImports() {
             wasm.__wbindgen_free(arg0, arg1);
         }
     };
+    imports.wbg.__wbg_new_b525de17f44a8943 = function() {
+        const ret = new Array();
+        return addHeapObject(ret);
+    };
     imports.wbg.__wbg_new_f841cc6f2098f4b5 = function() {
         const ret = new Map();
         return addHeapObject(ret);
@@ -345,6 +359,10 @@ function getImports() {
     imports.wbg.__wbindgen_string_new = function(arg0, arg1) {
         const ret = getStringFromWasm0(arg0, arg1);
         return addHeapObject(ret);
+    };
+    imports.wbg.__wbg_push_49c286f04dd3bf59 = function(arg0, arg1) {
+        const ret = getObject(arg0).push(getObject(arg1));
+        return ret;
     };
     imports.wbg.__wbg_get_f444599dd6f235e3 = function(arg0, arg1) {
         const ret = getObject(arg0).get(getObject(arg1));

@@ -248,6 +248,16 @@ module.exports.select_public_witness = function(circuit, intermediate_witness) {
     return takeObject(ret);
 };
 
+/**
+* @param {Uint8Array} circuit
+* @param {Map<any, any>} intermediate_witness
+* @returns {Array<any>}
+*/
+module.exports.select_public_witness_flattened = function(circuit, intermediate_witness) {
+    const ret = wasm.select_public_witness_flattened(addHeapObject(circuit), addHeapObject(intermediate_witness));
+    return takeObject(ret);
+};
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -302,6 +312,11 @@ module.exports.__wbg_error_f851667af71bcfc6 = function(arg0, arg1) {
     }
 };
 
+module.exports.__wbg_new_b525de17f44a8943 = function() {
+    const ret = new Array();
+    return addHeapObject(ret);
+};
+
 module.exports.__wbg_new_f841cc6f2098f4b5 = function() {
     const ret = new Map();
     return addHeapObject(ret);
@@ -325,6 +340,11 @@ module.exports.__wbg_value_6ac8da5cc5b3efda = function(arg0) {
 module.exports.__wbindgen_string_new = function(arg0, arg1) {
     const ret = getStringFromWasm0(arg0, arg1);
     return addHeapObject(ret);
+};
+
+module.exports.__wbg_push_49c286f04dd3bf59 = function(arg0, arg1) {
+    const ret = getObject(arg0).push(getObject(arg1));
+    return ret;
 };
 
 module.exports.__wbg_get_f444599dd6f235e3 = function(arg0, arg1) {

@@ -24,3 +24,9 @@ export function select_return_value(abi_json_str: string, intermediate_witness: 
 * @returns {Map<any, any>}
 */
 export function select_public_witness(circuit: Uint8Array, intermediate_witness: Map<any, any>): Map<any, any>;
+/**
+* @param {Uint8Array} circuit
+* @param {Map<any, any>} intermediate_witness
+* @returns {Array<any>}
+*/
+export function select_public_witness_flattened(circuit: Uint8Array, intermediate_witness: Map<any, any>): Array<any>;
