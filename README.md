@@ -2,4 +2,4 @@
 
 ## Tracks
 
-Noir lang Repository [noir-lang/noir@f731336](https://github.com/noir-lang/noir/tree/f731336c4021d795e3de5e44d23e339770318014)
+Noir lang Repository [noir-lang/noir@bbc5b17](https://github.com/noir-lang/noir/tree/bbc5b17c6b231ac0992a926cc092dcb3983c469c)
